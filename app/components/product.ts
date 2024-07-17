@@ -21,6 +21,6 @@ export default class ProductComponent extends Component {
       paymentMethodCcId,
     );
     // Descendants of 'Model' cannot be upcast because of 'eachRelationship' and 'eachAttribute'
-    this.purchase(paymentMethodCc as unknown as PaymentMethodModel);
+    this.purchase(paymentMethodCc);
   }
 }
