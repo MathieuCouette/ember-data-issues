@@ -11,11 +11,15 @@ module.exports = {
     'eslint:recommended',
     'plugin:ember/recommended',
     'plugin:prettier/recommended',
+    'plugin:import/recommended',
+    'plugin:import/typescript',
   ],
   env: {
     browser: true,
   },
-  rules: {},
+  rules: {
+    'import/no-cycle': 'error',
+  },
   overrides: [
     // ts files
     {
@@ -52,4 +56,14 @@ module.exports = {
       extends: ['plugin:qunit/recommended'],
     },
   ],
+  settings: {
+    'import/resolver': {
+      typescript: true,
+      'custom-alias': {
+        alias: {
+          '': './node_modules/ember-source/dist/packages',
+        },
+      },
+    },
+  },
 };

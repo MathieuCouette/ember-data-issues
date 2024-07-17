@@ -1,6 +1,6 @@
 import Application from 'ember-data-issues/app';
 import config from 'ember-data-issues/config/environment';
-import * as QUnit from 'qunit';
+import QUnit from 'qunit';
 import { setApplication } from '@ember/test-helpers';
 import { setup } from 'qunit-dom';
 import { start } from 'ember-qunit';
