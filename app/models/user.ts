@@ -15,7 +15,6 @@ export default class UserModel extends Model {
 
   // 'options' is 'undefined' because 'BooleanTransform' fails to extend
   // 'TypedTransformInstance'
-  // @attr<BooleanTransform>('boolean', { allowNull: true })
-  @attr<BooleanTransform>('boolean')
+  @attr<BooleanTransform>('boolean', { allowNull: true })
   declare default: boolean | null;
 }
